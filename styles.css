@@ -43,6 +43,13 @@ h1 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1rem;
+  align-items: start;
+}
+
+.action-unavailable {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
 }
 
 .action-link {
@@ -88,6 +95,43 @@ h1 {
 
 .tune {
   background: linear-gradient(135deg, #2f7bc7 0%, #115f8a 100%);
+}
+
+.tune-disabled {
+  position: relative;
+  overflow: hidden;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.tune-disabled::before,
+.tune-disabled::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 160%;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(220, 25, 25, 0.96);
+  transform-origin: center;
+  z-index: 2;
+}
+
+.tune-disabled::before {
+  transform: translate(-50%, -50%) rotate(27deg);
+}
+
+.tune-disabled::after {
+  transform: translate(-50%, -50%) rotate(-27deg);
+}
+
+.tune-down-note {
+  margin: 0;
+  font-size: 0.76rem;
+  line-height: 1.35;
+  color: var(--muted);
+  text-align: left;
 }
 
 .challenge-note {
