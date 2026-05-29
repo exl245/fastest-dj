@@ -90,6 +90,27 @@ h1 {
   background: linear-gradient(135deg, #2f7bc7 0%, #115f8a 100%);
 }
 
+.challenge-note {
+  margin-top: 1.5rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.82);
+  color: var(--muted);
+  text-align: left;
+}
+
+.challenge-note p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.challenge-note p + p {
+  margin-top: 0.85rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
 .social-footer {
   margin-top: auto;
   padding-top: 2rem;
